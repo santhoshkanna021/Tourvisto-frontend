@@ -10,7 +10,7 @@ const Login = () => {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen ">
       <img
         src="/bg.svg"
         alt="bg"
