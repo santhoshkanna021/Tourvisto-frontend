@@ -55,7 +55,7 @@ export const destinations = [
         "Winter: 0°C - 10°C (32°F - 50°F)",
       ],
     },
-  //   mapUrl: "https://via.placeholder.com/400x200",
+ 
   },
 
   {
@@ -112,7 +112,7 @@ export const destinations = [
         "Winter: 3°C - 12°C",
       ],
     },
-    mapUrl: "https://via.placeholder.com/400x200",
+   
   },
 
   {
@@ -166,7 +166,7 @@ export const destinations = [
         "Winter: 12°C - 24°C",
       ],
     },
-    // mapUrl: "https://via.placeholder.com/400x200",
+    
   },
 
   {
@@ -219,7 +219,7 @@ export const destinations = [
         "Winter: -5°C - 5°C",
       ],
     },
-    // mapUrl: "https://via.placeholder.com/400x200",
+    
   },
 
   {
@@ -270,7 +270,7 @@ export const destinations = [
         "Cool: 22°C - 30°C",
       ],
     },
-    // mapUrl: "https://via.placeholder.com/400x200",
+    
   },
 
   {
@@ -320,7 +320,7 @@ export const destinations = [
         "Summer: 8°C to 15°C",
       ],
     },
-    // mapUrl: "https://via.placeholder.com/400x200",
+   
   },
 
   {
@@ -370,7 +370,7 @@ export const destinations = [
         "Wet: 24°C - 29°C",
       ],
     },
-    // mapUrl: "https://via.placeholder.com/400x200",
+    
   },
   
   {
@@ -424,7 +424,7 @@ export const destinations = [
         "Winter: -5°C - 10°C"
       ]
     },
-    // mapUrl: "https://via.placeholder.com/400x200"
+   
   }
   
 ];

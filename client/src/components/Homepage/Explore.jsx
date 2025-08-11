@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TripCard from "./TripCard";
-import { destinations } from "../../data/destinations";
+import { destinations as destinationsData } from "../../data/destinations"; // renamed to avoid conflict
 
 const TripsGrid = () => {
-  // Remove duplicate trips based on `id`
+  const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Load hardcoded data
+    setDestinations(destinationsData);
+    setLoading(false);
+  }, []);
+
   const uniqueDestinations = Array.from(
-    new Map(destinations.map((trip) => [trip.id, trip])).values()
+    new Map(destinations.map((trip) => [trip._id || trip.id, trip])).values()
   );
+
+  if (loading) {
+    return <p className="text-center mt-10">Loading trips...</p>;
+  }
 
   return (
     <section className="py-6 px-6 bg-[#f8fafc]">
@@ -17,37 +29,31 @@ const TripsGrid = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-9">
         {uniqueDestinations.map((trip) => (
-          <TripCard key={trip.id} trip={trip} />
+          <TripCard key={trip._id || trip.id} trip={trip} />
         ))}
       </div>
 
       <div className="relative w-full mt-3 mb-7">
-  {/* Container with space-between */}
-  <div className="flex justify-between items-center w-full">
-    {/* Previous */}
-    <button className="px-4 py-2 rounded-full border text-black hover:bg-blue-500 transition ml-10">
-      ← Previous
-    </button>
+        <div className="flex justify-between items-center w-full">
+          <button className="px-4 py-2 rounded-full border text-black hover:bg-blue-500 transition ml-10">
+            ← Previous
+          </button>
+          <button className="px-4 py-2 rounded-full border text-black hover:bg-blue-500 transition mr-10">
+            Next →
+          </button>
+        </div>
 
-    {/* Next */}
-    <button className="px-4 py-2 rounded-full border text-black hover:bg-blue-500 transition mr-10">
-      Next →
-    </button>
-  </div>
-
-  {/* Page Numbers - Centered Absolutely */}
-  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex space-x-2">
-    {[1, 2, 3, 4,5,6].map((page) => (
-      <button
-        key={page}
-        className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium transition hover:bg-blue-500 hover:text-white`}
-      >
-        {page}
-      </button>
-    ))}
-  </div>
-</div>
-
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex space-x-2">
+          {[1, 2, 3, 4, 5, 6].map((page) => (
+            <button
+              key={page}
+              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium transition hover:bg-blue-500 hover:text-white"
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Footer */}
       <div className="py-7 px-15 bg-[#f8fafc] flex justify-between items-center">

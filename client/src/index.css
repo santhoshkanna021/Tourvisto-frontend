@@ -1,7 +1,12 @@
-@import "tailwindcss";
 
-html,body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+@import "tailwindcss"; 
+
+*{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Outfit", sans-serif;
+}
+
