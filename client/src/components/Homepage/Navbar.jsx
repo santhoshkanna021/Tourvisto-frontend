@@ -26,7 +26,7 @@ const Navbar = () => {
 
       {/* Right: Static User Info */}
       <div className="flex items-center gap-5 justify-end">
-        <span className="text-white font-figtree" title={emailTooltip}>
+        <span className="text-black font-figtree" title={emailTooltip}>
           {displayName}
         </span>
 

@@ -55,7 +55,7 @@ const Stripe = () => {
       </div> 
       <div className='mt-5'>
       <p className="text-gray-600 text-sm mb-5 text-start ml-13">{name}</p>
-      <h2 className="text-3xl font-bold text-start mb-5 ml-13">${price}</h2>
+      <h2 className="text-2xl font-bold text-start mb-5 ml-13">${price}</h2>
       </div>
          
 

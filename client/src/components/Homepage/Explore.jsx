@@ -22,7 +22,7 @@ const TripsGrid = () => {
 
   return (
     <section className="py-6 px-6 bg-[#f8fafc]">
-      <h2 className="text-3xl font-bold text-[#1F1F36] mb-2 ml-13">Handpicked Trips</h2>
+      <h2 className="text-2xl font-bold text-[#1F1F36] mb-2 ml-13">Handpicked Trips</h2>
       <p className="text-[#7F7E83] ml-13">
         Browse well-planned trips designed for different travel styles and interests
       </p>

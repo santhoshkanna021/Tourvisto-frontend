@@ -1,23 +1,23 @@
 import React from "react";
-import barcelona from '/public/card-img-1.svg';
-import Australia from '/public/card-img-4.svg';
-import Japan1 from '/public/card-img-5.svg';
-import Japan2 from '/public/card-img-6.svg';
-import London from '/public/card-img-2.svg';
-import Australia2 from '/public/card-img-3.svg';
+import barcelona from "../../assets/Features img/card-img-1.svg";
+import australia from "../../assets/Features img/card-img-3.svg";
+import japan1 from "../../assets/Features img/card-img-3.svg";
+import japan2 from "../../assets/Features img/card-img-4.svg";
+import london from "../../assets/Features img/card-img-5.svg";
+import australia2 from "../../assets/Features img/card-img-6.svg";
 
 const destinations = [
   { image: barcelona, title: "Barcelona Tour", rating: "3.5", activities: "196 Activities" },
-  { image: Australia, title: "Australia Tour", rating: "3.5", activities: "196 Activities" },
-  { image: Japan1, title: "Japan Tour", rating: "3.5", activities: "196 Activities" },
-  { image: Japan2, title: "Japan Tour", rating: "3.5", activities: "196 Activities" },
-  { image: London, title: "London, United State", rating: "3.5", activities: "196 Activities" },
-  { image: Australia2, title: "Australia Tour", rating: "3.5", activities: "196 Activities" }
+  { image: australia, title: "Australia Tour", rating: "3.5", activities: "196 Activities" },
+  { image: japan1, title: "Japan Tour", rating: "3.5", activities: "196 Activities" },
+  { image: japan2, title: "Japan Tour", rating: "3.5", activities: "196 Activities" },
+  { image: london, title: "London, United States", rating: "3.5", activities: "196 Activities" },
+  { image: australia2, title: "Australia Tour", rating: "3.5", activities: "196 Activities" }
 ];
 
 const DestinationCard = ({ image, title, rating, activities }) => (
   <div className="relative rounded-xl overflow-hidden shadow-md w-full h-full">
-    <img src={image} alt={title} className="w-full h-full object-cover" />
+    <img src={image} alt={title} className="w-full h-full object-cover max-w-full" />
     <div className="absolute top-3 left-3 bg-white text-red-500 text-xs px-3 py-1 rounded-full font-semibold shadow">
       {rating}
     </div>
@@ -30,15 +30,19 @@ const DestinationCard = ({ image, title, rating, activities }) => (
 
 const Features = () => {
   return (
-    <section className="py-10 px-6 bg-[#f8fafc] ">
-      <h2 className="text-3xl font-bold text-[#1F1F36] mb-2 ml-13">Featured Travel Destinations</h2>
-      <p className="text-[#7F7E83] ml-13 ">Check out some of the best places you can visit around the world.</p>
+    <section className="py-10 px-6 bg-[#f8fafc] overflow-hidden">
+      <h2 className="text-2xl font-bold text-[#1F1F36] mb-2 ml-12">
+        Featured Travel Destinations
+      </h2>
+      <p className="text-[#7F7E83] ml-12">
+        Check out some of the best places you can visit around the world.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-12">
         {/* Left Side (2/3 width) */}
         <div className="md:col-span-2 flex flex-col gap-6">
           {/* Large top card */}
-          <div className="h-[328px]"> {/* You can use h-80 or h-96 if preferred */}
+          <div className="h-[328px]">
             <DestinationCard {...destinations[0]} />
           </div>
 
